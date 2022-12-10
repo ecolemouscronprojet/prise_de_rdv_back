@@ -1,16 +1,12 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
-const port = 3000
+const port = 3005
+const initAllRoutes = require('./routes');
 
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/ma-premiere-page', (req, res) => {
-    res.send('Hello World')
-});
-
-app.post('/', (req, res) => {
-    res.send('HEllo tout le monde')
-});
-
+initAllRoutes(app)
 
 app.listen(port, () => {
     console.log(`App started ${port}`)
