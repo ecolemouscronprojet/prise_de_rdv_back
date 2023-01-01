@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require('uuid');
 
+//MOCK
 const data = [
     {
         id: 'b1ab14b4-6514-4de5-a265-209a4f4133df',
@@ -81,4 +82,5 @@ module.exports = {
     add,
     remove,
     edit,
+    officeData: data
 }
